@@ -1,0 +1,14 @@
+[package]
+name = "poker-engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+# No dependencies on purpose. The RNG is inlined so shuffles stay reproducible
+# across toolchain versions, and the evaluator needs no tables.
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

@@ -1,0 +1,17 @@
+# Root-level ignores (backend/ and frontend/ have their own .gitignore too)
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.New floder/
+
+# Env files (never commit real secrets)
+**/.env
+!**/.env.example
+frontend/.env.local
+!frontend/.env.local.example
+
+# Docker volumes / local data
+*.sqlite
